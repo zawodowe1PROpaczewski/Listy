@@ -1,0 +1,38 @@
+/*
+  Typy list dla CSS (krótki opis) - wartości dla list-style-type
+
+  Dla ul (nieuporządkowane, unordered lists):
+  - disc          : wypełniony krążek (domyślny dla ul)
+  - circle        : pusty krążek (obręcz)
+  - square        : kwadrat
+  - none          : brak punktorów
+  - image(url)    : użycie obrazka jako punktor (przez list-style-image)
+
+  Dla ol (uporządkowane, ordered lists):
+  - decimal               : 1, 2, 3, ... (domyślny)
+  - decimal-leading-zero  : 01, 02, 03, ...
+  - lower-roman / upper-roman : i, ii, iii... / I, II, III...
+  - lower-alpha / upper-alpha : a, b, c... / A, B, C... (również: lower-latin/upper-latin)
+  - lower-greek           : α, β, γ... (ograniczona obsługa)
+  - armenian / georgian / hebrew : numeracja specyficzna dla języków
+  - cjk-ideographic / hiragana / katakana (i warianty) : systemy dla pisma azjatyckiego
+  - none                  : brak numeracji
+
+  Uwaga:
+  - Dostępność niektórych typów zależy od przeglądarki.
+  - Istnieją dodatkowe, lokalne wartości specyficzne dla różnych systemów pisma i rozszerzeń CSS.
+*/
+
+ol {
+    list-style-type: decimal; /* Domyślny typ numeracji dla ol */
+}
+
+ul {
+    list-style-type: disc; /* Domyślny typ punktorów dla ul */
+}
+
+
+/* Zastosuj styl dla ul ktore ma w sobie li ktore ma w sobie ul  czyli zostatnie zastosowany do ostatniego ul*/
+ul > li > ul {
+    list-style-type: circle; /* puste kółka */
+}
